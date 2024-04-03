@@ -17,6 +17,8 @@ El complemento administra automáticamente los ciclos de trabajo y descanso, inc
 ## Changelog
 
 ### 1.2
+- Ahora los gestos de entrada pueden reasignarse bajo la categoría "Gestor de pomodoros". [PR #1](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/1)
+### 1.2
 - Se arregla el tratamiento interno del complemento por NVDA.
 ### 1.1
 - El complemento no se ejecuta en pantallas seguras.
