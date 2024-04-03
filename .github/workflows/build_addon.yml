@@ -65,11 +65,11 @@ jobs:
       id: prep
       run: |
         if [ -f "changelog.md" ]; then
-          BODY_CONTENT=$(cat changelog.md)
+          BODY_CONTENT="$(<changelog.md)"
           BODY_CONTENT="${BODY_CONTENT//'%'/'%25'}"
           BODY_CONTENT="${BODY_CONTENT//$'\n'/'%0A'}"
           BODY_CONTENT="${BODY_CONTENT//$'\r'/'%0D'}"
-          echo "BODY=$BODY_CONTENT" >> $GITHUB_ENV
+          echo "BODY=${BODY_CONTENT}" >> $GITHUB_ENV
         else
           echo "BODY=" >> $GITHUB_ENV
         fi
