@@ -47,6 +47,7 @@ class PomodoroThread(Thread):
     def start_break(self):
         self.in_break = True
         self.start_time = time.time()
+        self.cycles_completed += 1
         if self.cycles_completed % 4 == 0:
             self.long_break = True
             ui.message("Ciclo completado. Iniciando descanso largo.")
@@ -57,7 +58,6 @@ class PomodoroThread(Thread):
             tones.beep(FRECUENCIA_TONO_DESCANSO, DURACION_TONO)
 
     def end_break(self):
-        self.cycles_completed += 1
         self.in_break = False
         self.start_time = time.time()
         if self.long_break:
