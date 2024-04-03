@@ -102,6 +102,13 @@ class PomodoroThread(Thread):
     def stop(self):
         self.stop_event.set()
 
+# Decorador para deshabilitar en modo seguro
+def disableInSecureMode(decoratedCls):
+    if globalVars.appArgs.secure:
+        return globalPluginHandler.GlobalPlugin
+    return decoratedCls
+
+@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
     def __init__(self):
         super(GlobalPlugin, self).__init__()
