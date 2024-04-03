@@ -16,7 +16,7 @@ def _(arg):
 # Add-on information variables
 addon_info = {
 	# add-on Name/identifier, internal for NVDA
-	"addon_name": "GestorDePomodoros",
+	"addon_name": "gestorDePomodoros",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on
 	# to be shown on installation and add-on information found in Add-ons Manager.
@@ -30,7 +30,7 @@ addon_info = {
 	# Author(s)
 	"addon_author": "Jesús Pavón Abián <galorasd@gmail.com>",
 	# URL for the add-on documentation support
-	"addon_url": "https://github.com/jpavonabian/Gestor-de-Pomodoros/",
+	"addon_url": "https://github.com/jpavonabian/Gestor-de-Pomodoros",
 	# URL for the add-on repository where the source code can be found
 	"addon_sourceURL": "https://github.com/jpavonabian/Gestor-de-Pomodoros",
 	# Documentation file name
