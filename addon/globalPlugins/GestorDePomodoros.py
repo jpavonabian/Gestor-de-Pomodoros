@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+# Complemento para NVDA que ayuda a seguir ciclos Pomodoro
+# Copyright (C) 2024 Jesús Pavón Abián <galorasd@gmail.com>
+# This file is covered by the GNU General Public License.
+# Agradecimientos a Sukil Etxenike <sukiletxe@yahoo.es> por ponerme en el camino correcto cuando por falta de experiencia en el desarrollo de complementos no sabía por dónde tirar.
+# Agradecimientos a Ángel Alcántar <rayoalcantar@gmail.com> por echarle un ojo al código.
+
+
 import globalPluginHandler
 import scriptHandler
 from threading import Thread, Event
