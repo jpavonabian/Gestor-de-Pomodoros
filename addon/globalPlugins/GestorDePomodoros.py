@@ -13,6 +13,7 @@ import ui
 import addonHandler
 import time
 import tones
+import globalVars
 
 addonHandler.initTranslation()
 
