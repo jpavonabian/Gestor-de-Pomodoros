@@ -16,6 +16,10 @@ El complemento administra automáticamente los ciclos de trabajo y descanso, inc
 
 ## Changelog
 
+### 1.1
+- El complemento no se ejecuta en pantallas seguras.
+- Se automatiza la liberación con GitHub Actions.
+
 ### 1.0
 
 - Versión inicial del complemento.
