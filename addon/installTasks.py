@@ -2,7 +2,8 @@
 
 # Este archivo está cubierto por la Licencia Pública General de GNU.
 # Última actualización 2024
-# Derechos de autor (C) 2024 Ángel Alcántar <rayoalcantar@gmail.com>
+# Derechos de autor (C) 2024 Jesús Pavón Abián <galorasd@gmail.com>
+# Idea y gran parte del código tomada de los complementos de Ángel Alcántar <rayoalcantar@gmail.com> ¡Gracias!
 
 import addonHandler
 
@@ -19,7 +20,7 @@ class donate:
             lang = 'es'
         else:
             lang = 'en'
-        webbrowser.open(f"https://www.paypal.com/paypalme/rayoalcantar?lang={lang}")
+        webbrowser.open(f"https://www.paypal.com/paypalme/jpavonabian?lang={lang}")
 
     def request():
         import wx
@@ -29,8 +30,8 @@ class donate:
         title = _N("Por favor, dona")
         
         # Translators: The text of the donate dialog
-        message = _("""Internet usage monitor  - complemento gratuito para NVDA.
-Puedes hacer una donación a Ángel Alcántar para ayudar en el desarrollo futuro de este complemento.
+        message = _("""Gestor de Pomodoros - complemento gratuito para NVDA.
+Puedes hacer una donación a Jesús Pavón Abián para ayudar en el desarrollo futuro de este complemento.
 ¿Quieres hacer una donación ahora? Para la transacción, serás redirigido al sitio web de PayPal.""")
         
         name = addonHandler.getCodeAddon().manifest['summary']

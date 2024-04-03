@@ -58,38 +58,46 @@ class PomodoroThread(Thread):
         self.cycles_completed += 1
         if self.cycles_completed % 4 == 0:
             self.long_break = True
-            ui.message("Ciclo completado. Iniciando descanso largo.")
+            # Translators: A long break begins.
+            ui.message(_("Ciclo completado. Iniciando descanso largo."))
             tones.beep(FRECUENCIA_TONO_DESCANSO, DURACION_TONO, 2)
         else:
             self.long_break = False
-            ui.message("Ciclo completado. Iniciando descanso.")
+            # Translators: A break begins.
+            ui.message(_("Ciclo completado. Iniciando descanso."))
             tones.beep(FRECUENCIA_TONO_DESCANSO, DURACION_TONO)
 
     def end_break(self):
         self.in_break = False
         self.start_time = time.time()
         if self.long_break:
-            ui.message("Descanso largo finalizado. Iniciando nuevo ciclo.")
+            # Translators: A long break ends.
+            ui.message(_("Descanso largo finalizado. Iniciando nuevo ciclo."))
             self.long_break = False
         else:
-            ui.message("Descanso finalizado. Iniciando nuevo ciclo.")
+            # Translators: A break ends.
+            ui.message(_("Descanso finalizado. Iniciando nuevo ciclo."))
         tones.beep(FRECUENCIA_TONO_INICIO, DURACION_TONO)
 
     def report_status(self):
         if not self.pomodoro_active:
-            ui.message("El Pomodoro no está activo.")
+            # Translators: Pomodoro is not active.
+            ui.message(_("El Pomodoro no está activo."))
             return
         current_time = time.time()
         if self.paused:
-            ui.message("El Pomodoro está pausado.")
+            # Translators: Pomodoro is paused.
+            ui.message(_("El Pomodoro está pausado."))
             return
         elapsed_time = current_time - self.start_time
         if self.in_break:
             remaining_time = DURACION_DESCANSO_LARGO - elapsed_time if self.long_break else DURACION_DESCANSO - elapsed_time
-            ui.message(f"Descanso en progreso. Tiempo restante: {int(remaining_time // 60)} minutos y {int(remaining_time % 60)} segundos.")
+            # Translators: Break in progres.
+            ui.message(_("Descanso en progreso. Tiempo restante: {minutes} minutos y {seconds} segundos.").format(minutes=int(remaining_time // 60), seconds=int(remaining_time % 60)))
         else:
             remaining_time = DURACION_POMODORO - elapsed_time
-            ui.message(f"Ciclo en progreso. Tiempo restante: {int(remaining_time // 60)} minutos y {int(remaining_time % 60)} segundos.")
+            # Translators: Pomodoro in progress.
+            ui.message(_("Ciclo en progreso. Tiempo restante: {minutes} minutos y {seconds} segundos.").format(minutes=int(remaining_time // 60), seconds=int(remaining_time % 60)))
 
     def stop(self):
         self.stop_event.set()
@@ -122,25 +130,31 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
                 self.pomodoro_thread.paused = False
                 self.pomodoro_thread.in_break = False
                 self.pomodoro_thread.start_time = time.time()
-                ui.message("Pomodoro iniciado.")
+                # Translators: Pomodoro started.
+                ui.message(_("Pomodoro iniciado."))
             elif self.pomodoro_thread.paused:
                 self.pomodoro_thread.paused = False
-                ui.message("Pomodoro reanudado.")
+                # Translators: Pomodoro resumed.
+                ui.message(_("Pomodoro reanudado."))
             else:
                 self.pomodoro_thread.report_status()
         elif self.keyPressCount >= 2:
             if self.pomodoro_thread.pomodoro_active and not self.pomodoro_thread.paused:
                 self.pomodoro_thread.paused = True
-                ui.message("Pomodoro pausado.")
+                # Translators: Pomodoro Paused.
+                ui.message(_("Pomodoro pausado."))
             elif self.pomodoro_thread.paused:
                 self.pomodoro_thread.paused = False
-                ui.message("Pomodoro reanudado.")
+                # Translators: Pomodoro resumed.
+                ui.message(_("Pomodoro reanudado."))
             else:
-                ui.message("No hay un Pomodoro activo para pausar o reanudar.")
+                # Translators: There not Pomodoro.
+                ui.message(_("No hay un Pomodoro activo para pausar o reanudar."))
         self.lastKeyPressTime = currentTime
 
     @scriptHandler.script(description="Detiene el Pomodoro", gesture="kb:NVDA+CTRL+SHIFT+P")
     def script_stopPomodoro(self, gesture):
         if self.pomodoro_thread.pomodoro_active:
             self.pomodoro_thread.reset()
-            ui.message("Pomodoro detenido.")
+            # Translators: Pomodoro stoped.
+            ui.message(_("Pomodoro detenido."))
