@@ -54,10 +54,21 @@ jobs:
     needs: ["build"]
     steps:
     - uses: actions/checkout@v3
+
     - name: download releases files
       uses: actions/download-artifact@v3
+
     - name: Display structure of downloaded files
       run: ls -R
+
+    - name: Prepare release body
+      id: prep
+      run: |
+        if [ -f "changelog.md" ]; then
+          echo "BODY=$(cat changelog.md)" >> $GITHUB_ENV
+        else
+          echo "BODY=" >> $GITHUB_ENV
+        fi
 
     - name: Release
       uses: softprops/action-gh-release@v1
@@ -65,3 +76,4 @@ jobs:
         files: packaged_addon/*.nvda-addon
         fail_on_unmatched_files: true
         prerelease: ${{ contains(github.ref, '-') }}
+        body: ${{ env.BODY }}
