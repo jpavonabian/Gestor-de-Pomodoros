@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2
+- Se arregla el tratamiento interno del complemento por NVDA.
+
 ## 1.1
 - El complemento no se ejecuta en pantallas seguras.
 - Se automatiza la liberación con GitHub Actions.
