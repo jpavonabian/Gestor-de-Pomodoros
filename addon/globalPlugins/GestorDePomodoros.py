@@ -13,6 +13,7 @@ import ui
 import addonHandler
 import time
 import tones
+import globalVars
 
 addonHandler.initTranslation()
 
@@ -122,7 +123,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             self.pomodoro_thread.stop()
             self.pomodoro_thread.join()
 
-    @scriptHandler.script(description="Gestiona el Pomodoro (iniciar/reportar/pausar)", gesture="kb:NVDA+SHIFT+P")
+    @scriptHandler.script(description="Gestiona el Pomodoro (iniciar/reportar/pausar)", gesture="kb:NVDA+SHIFT+P", category=_("Gestión del pomodoro"))
     def script_managePomodoro(self, gesture):
         currentTime = time.time()
         if currentTime - self.lastKeyPressTime < 0.5:
@@ -159,7 +160,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
                 ui.message(_("No hay un Pomodoro activo para pausar o reanudar."))
         self.lastKeyPressTime = currentTime
 
-    @scriptHandler.script(description="Detiene el Pomodoro", gesture="kb:NVDA+CTRL+SHIFT+P")
+    @scriptHandler.script(description="Detiene el Pomodoro", gesture="kb:NVDA+CTRL+SHIFT+P", category=_("Gestión del pomodoro"))
     def script_stopPomodoro(self, gesture):
         if self.pomodoro_thread.pomodoro_active:
             self.pomodoro_thread.reset()
