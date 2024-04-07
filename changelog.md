@@ -1,4 +1,9 @@
 # Changelog
+## 1.4
+- Cambiados los atajos de teclado para que sea más intuitivo.
+- Retocado un poco el código interno.
+- Ahora los atajos aparecen bien en las categorías de gestos.
+
 ## 1.3
 - Ahora los gestos de entrada pueden reasignarse bajo la categoría "Gestor de pomodoros". [PR #1](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/1)
 

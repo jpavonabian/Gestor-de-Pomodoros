@@ -115,54 +115,38 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         super(GlobalPlugin, self).__init__()
         self.pomodoro_thread = PomodoroThread()
         self.pomodoro_thread.start()
-        self.lastKeyPressTime = 0
-        self.keyPressCount = 0
 
     def __del__(self):
         if self.pomodoro_thread.is_alive():
             self.pomodoro_thread.stop()
             self.pomodoro_thread.join()
 
-    @scriptHandler.script(description="Gestiona el Pomodoro (iniciar/reportar/pausar)", gesture="kb:NVDA+SHIFT+P", category=_("Gestión del pomodoro"))
-    def script_managePomodoro(self, gesture):
-        currentTime = time.time()
-        if currentTime - self.lastKeyPressTime < 0.5:
-            self.keyPressCount += 1
+    @scriptHandler.script(description=_("Inicia o pausa el Pomodoro"), gesture="kb:NVDA+shift+p", category=_("Gestor de pomodoros"))
+    def script_togglePomodoro(self, gesture):
+        if not self.pomodoro_thread.pomodoro_active:
+            self.pomodoro_thread.reset()
+            self.pomodoro_thread.pomodoro_active = True
+            self.pomodoro_thread.paused = False
+            self.pomodoro_thread.in_break = False
+            self.pomodoro_thread.start_time = time.time()
+            # Translators: Message announced when the Pomodoro is started.
+            ui.message(_("Pomodoro iniciado."))
+        elif self.pomodoro_thread.paused:
+            self.pomodoro_thread.paused = False
+            # Translators: Message announced when the Pomodoro is resumed.
+            ui.message(_("Pomodoro reanudado."))
         else:
-            self.keyPressCount = 1
+            self.pomodoro_thread.paused = True
+            # Translators: Message announced when the Pomodoro is paused.
+            ui.message(_("Pomodoro pausado."))
 
-        if self.keyPressCount == 1:
-            if not self.pomodoro_thread.pomodoro_active:
-                self.pomodoro_thread.reset()
-                self.pomodoro_thread.pomodoro_active = True
-                self.pomodoro_thread.paused = False
-                self.pomodoro_thread.in_break = False
-                self.pomodoro_thread.start_time = time.time()
-                # Translators: Pomodoro started.
-                ui.message(_("Pomodoro iniciado."))
-            elif self.pomodoro_thread.paused:
-                self.pomodoro_thread.paused = False
-                # Translators: Pomodoro resumed.
-                ui.message(_("Pomodoro reanudado."))
-            else:
-                self.pomodoro_thread.report_status()
-        elif self.keyPressCount >= 2:
-            if self.pomodoro_thread.pomodoro_active and not self.pomodoro_thread.paused:
-                self.pomodoro_thread.paused = True
-                # Translators: Pomodoro Paused.
-                ui.message(_("Pomodoro pausado."))
-            elif self.pomodoro_thread.paused:
-                self.pomodoro_thread.paused = False
-                # Translators: Pomodoro resumed.
-                ui.message(_("Pomodoro reanudado."))
-            else:
-                # Translators: There not Pomodoro.
-                ui.message(_("No hay un Pomodoro activo para pausar o reanudar."))
-        self.lastKeyPressTime = currentTime
+    @scriptHandler.script(description=_("Reporta el estado del Pomodoro"), gesture="kb:NVDA+shift+r", category=_("Gestor de pomodoros"))
+    def script_reportPomodoroStatus(self, gesture):
+        self.pomodoro_thread.report_status()
 
-    @scriptHandler.script(description="Detiene el Pomodoro", gesture="kb:NVDA+CTRL+SHIFT+P", category=_("Gestión del pomodoro"))
+    @scriptHandler.script(description=_("Detiene el Pomodoro"), gesture="kb:NVDA+shift+o", category=_("Gestor de pomodoros"))
     def script_stopPomodoro(self, gesture):
         if self.pomodoro_thread.pomodoro_active:
             self.pomodoro_thread.reset()
-            # Translators: Pomodoro stoped.
+            # Translators: Message announced when the Pomodoro is stopped.
             ui.message(_("Pomodoro detenido."))
