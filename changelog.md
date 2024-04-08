@@ -1,4 +1,7 @@
 # Changelog
+## 1.5
+- Los atajos de teclado se han eliminado. Deben asignarse por el usuario.
+
 ## 1.4
 - Cambiados los atajos de teclado para que sea más intuitivo.
 - Retocado un poco el código interno.

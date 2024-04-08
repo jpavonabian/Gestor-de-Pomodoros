@@ -121,7 +121,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             self.pomodoro_thread.stop()
             self.pomodoro_thread.join()
 
-    @scriptHandler.script(description=_("Inicia o pausa el Pomodoro"), gesture="kb:NVDA+shift+p", category=_("Gestor de pomodoros"))
+    @scriptHandler.script(description=_("Inicia o pausa el Pomodoro"), gesture=None, category=_("Gestor de pomodoros"))
     def script_togglePomodoro(self, gesture):
         if not self.pomodoro_thread.pomodoro_active:
             self.pomodoro_thread.reset()
@@ -140,11 +140,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             # Translators: Message announced when the Pomodoro is paused.
             ui.message(_("Pomodoro pausado."))
 
-    @scriptHandler.script(description=_("Reporta el estado del Pomodoro"), gesture="kb:NVDA+shift+r", category=_("Gestor de pomodoros"))
+    @scriptHandler.script(description=_("Reporta el estado del Pomodoro"), gesture=None, category=_("Gestor de pomodoros"))
     def script_reportPomodoroStatus(self, gesture):
         self.pomodoro_thread.report_status()
 
-    @scriptHandler.script(description=_("Detiene el Pomodoro"), gesture="kb:NVDA+shift+o", category=_("Gestor de pomodoros"))
+    @scriptHandler.script(description=_("Detiene el Pomodoro"), gesture=None, category=_("Gestor de pomodoros"))
     def script_stopPomodoro(self, gesture):
         if self.pomodoro_thread.pomodoro_active:
             self.pomodoro_thread.reset()

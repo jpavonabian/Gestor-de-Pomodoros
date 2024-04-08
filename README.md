@@ -9,11 +9,12 @@
 Una vez activado, el complemento permite al usuario iniciar, pausar, reanudar o detener el temporizador Pomodoro mediante atajos de teclado específicos. Además, proporciona retroalimentación auditiva y verbal al inicio y al final de cada sesión de trabajo o descanso. El complemento administra automáticamente los ciclos de trabajo y descanso, incluyendo descansos largos después de cada cuatro ciclos de trabajo completados.
 
 ### Atajos de teclado
-- Iniciar/Pausar Pomodoro: NVDA+SHIFT+P
-- Reportar Estado del Pomodoro: NVDA+SHIFT+R
-- Detener Pomodoro: NVDA+SHIFT+O
+Los atajos de teclado deben assignarse desde la opción gestos de entrada del menú Preferencias de NVDA. Las opciones se pueden encontrar bajo la categoría Gestor de pomodoros.
 
 ## Changelog
+### 1.5
+- Los atajos de teclado se han eliminado. Deben asignarse por el usuario.
+
 ### 1.4
 - Cambiados los atajos de teclado para que sea más intuitivo.
 - Retocado un poco el código interno.
