@@ -1,4 +1,7 @@
 # Changelog
+## 1.7
+- Arreglado un error con el canal de distribución.
+- Arreglado un bug cuando intentabas detener un pomodoro que no había sido iniciado antes.
 ## 1.6
 - Cambiada la duración y la frecuencia de los tonos.
 - Ahora los mensajes del complemento tienen prioridad alta, de forma que no se pierdan si se está haciendo otra cosa.
