@@ -155,3 +155,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             self.pomodoro_thread.reset()
             # Translators: Message announced when the Pomodoro is stopped.
             ui.message(_("Pomodoro detenido."))
+        else:
+            # Translators: Message announced when the Pomodoro is not stopped.
+            ui.message(_("No hay ningún pomodoro activo."))
+            
