@@ -26,7 +26,7 @@ addon_info = {
 	"addon_description": _("""Complemento que permite gestionar ciclos Pomodoros.
 Útil para estudiantes o trabajadores que necesitan ayuda para dispersarse menos o prestar más atención a sus tareas."""),
 	# version
-	"addon_version": "1.5",
+	"addon_version": "1.6",
 	# Author(s)
 	"addon_author": "Jesús Pavón Abián <galorasd@gmail.com>",
 	# URL for the add-on documentation support

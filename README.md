@@ -12,6 +12,11 @@ Una vez activado, el complemento permite al usuario iniciar, pausar, reanudar o 
 Los atajos de teclado deben assignarse desde la opción gestos de entrada del menú Preferencias de NVDA. Las opciones se pueden encontrar bajo la categoría Gestor de pomodoros.
 
 ## Changelog
+### 1.6
+- Cambiada la duración y la frecuencia de los tonos.
+- Ahora los mensajes del complemento tienen prioridad alta, de forma que no se pierdan si se está haciendo otra cosa.
+- Ahora los tonos no se escuchan por el canal derecho, era un error.
+
 ### 1.5
 - Los atajos de teclado se han eliminado. Deben asignarse por el usuario.
 
@@ -33,3 +38,9 @@ Los atajos de teclado deben assignarse desde la opción gestos de entrada del me
 - Versión inicial del complemento.
 - Implementación de la funcionalidad básica de Pomodoro, incluyendo inicio, pausa, reanudación, y detención del temporizador.
 - Anuncios auditivos y verbales para el inicio y fin de las sesiones de trabajo y descanso.
+
+## Agradecimientos especiales
+- A Sukil Etxenike <sukiletxe@yahoo.es> por ponerme en el camino correcto cuando por falta de experiencia en el desarrollo de complementos no sabía por dónde tirar.
+- A Ángel Alcántar <rayoalcantar@gmail.com> por echarle un ojo al código.
+- A Noelia Ruiz Martínez <nrm1977@gmail.com> por el Feedback que está dando con respecto al código y por aguantar tantísima duda de novato.
+

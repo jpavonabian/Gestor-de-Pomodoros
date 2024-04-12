@@ -1,4 +1,8 @@
 # Changelog
+## 1.6
+- Cambiada la duración y la frecuencia de los tonos.
+- Ahora los mensajes del complemento tienen prioridad alta, de forma que no se pierdan si se está haciendo otra cosa.
+- Ahora los tonos no se escuchan por el canal derecho, era un error.
 ## 1.5
 - Los atajos de teclado se han eliminado. Deben asignarse por el usuario.
 
