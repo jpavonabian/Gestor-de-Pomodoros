@@ -15,6 +15,7 @@ import time
 import tones
 import globalVars
 from speech.priorities import SpeechPriority
+import wx
 
 addonHandler.initTranslation()
 
