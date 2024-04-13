@@ -1,4 +1,9 @@
 # Changelog
+## 1.8
+- Solucionado un error de Braille y los mensajes.
+- Solucionado un error con la gestión de tiempo.
+- Cambiado mucho código interno.
+
 ## 1.7
 - Arreglado un error con el canal de distribución.
 - Arreglado un bug cuando intentabas detener un pomodoro que no había sido iniciado antes.
