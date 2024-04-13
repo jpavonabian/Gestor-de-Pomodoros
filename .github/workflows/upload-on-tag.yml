@@ -5,6 +5,14 @@ on:
     tags:
       '*'
 
+permissions:
+  contents: write
+  packages: write
+  actions: write
+  deployments: write
+  issues: write
+  pull-requests: read
+
 jobs:
   buildAndUpload:
     runs-on: ubuntu-latest
