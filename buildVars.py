@@ -42,7 +42,7 @@ addon_info = {
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
-	"addon_updateChannel": "None",
+	"addon_updateChannel": None,
 	# Add-on license such as GPL 2
 	"addon_license": "GPL 2",
 	# URL for the license document the ad-on is licensed under
@@ -57,7 +57,7 @@ addon_info = {
 # pythonSources = ["addon/globalPlugins/*.py"]
 # For more information on SCons Glob expressions please take a look at:
 # https://scons.org/doc/production/HTML/scons-user/apd.html
-pythonSources = ["addon/globalPlugins/*.py"]
+pythonSources = ["addon/globalPlugins/*.py","addon/*.py"]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]

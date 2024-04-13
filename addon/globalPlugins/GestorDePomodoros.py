@@ -34,12 +34,13 @@ class PomodoroThread(Thread):
         super(PomodoroThread, self).__init__()
         self.stop_event = Event()
         self.paused = True
+        self.daemon = true
         self.reset()
 
     def reset(self):
         self.paused = True
         self.pomodoro_active = False
-        self.start_time = None
+        self.start_time = time.monotonic()
         self.in_break = False
         self.cycles_completed = 0
         self.long_break = False
@@ -65,12 +66,12 @@ class PomodoroThread(Thread):
         if self.cycles_completed % 4 == 0:
             self.long_break = True
             # Translators: A long break begins.
-            ui.message(_("Ciclo completado. Iniciando descanso largo."),SpeechPriority.NOW)
+            wx.CallAfter(ui.message, _("Ciclo completado. Iniciando descanso largo."),SpeechPriority.NOW)
             tones.beep(FRECUENCIA_TONO_DESCANSO, DURACION_TONO)
         else:
             self.long_break = False
             # Translators: A break begins.
-            ui.message(_("Ciclo completado. Iniciando descanso."),SpeechPriority.NOW)
+            wx.CallAfter(ui.message, _("Ciclo completado. Iniciando descanso."),SpeechPriority.NOW)
             tones.beep(FRECUENCIA_TONO_DESCANSO, DURACION_TONO)
 
     def end_break(self):
@@ -78,32 +79,32 @@ class PomodoroThread(Thread):
         self.start_time = time.monotonic()
         if self.long_break:
             # Translators: A long break ends.
-            ui.message(_("Descanso largo finalizado. Iniciando nuevo ciclo."),SpeechPriority.NOW)
+            wx.CallAfter(ui.message, _("Descanso largo finalizado. Iniciando nuevo ciclo."),SpeechPriority.NOW)
             self.long_break = False
         else:
             # Translators: A break ends.
-            ui.message(_("Descanso finalizado. Iniciando nuevo ciclo."),SpeechPriority.NOW)
+            wx.CallAfter(ui.message, _("Descanso finalizado. Iniciando nuevo ciclo."),SpeechPriority.NOW)
         tones.beep(FRECUENCIA_TONO_INICIO, DURACION_TONO)
 
     def report_status(self):
         if not self.pomodoro_active:
             # Translators: Pomodoro is not active.
-            ui.message(_("El Pomodoro no está activo."),SpeechPriority.NOW)
+            wx.CallAfter(ui.message, _("El pomodoro no está activo."),SpeechPriority.NOW)
             return
         current_time = time.monotonic()
         if self.paused:
             # Translators: Pomodoro is paused.
-            ui.message(_("El Pomodoro está pausado."),SpeechPriority.NOW)
+            wx.CallAfter(ui.message, _("El pomodoro está pausado."),SpeechPriority.NOW)
             return
         elapsed_time = current_time - self.start_time
         if self.in_break:
             remaining_time = DURACION_DESCANSO_LARGO - elapsed_time if self.long_break else DURACION_DESCANSO - elapsed_time
             # Translators: Break in progres.
-            ui.message(_("Descanso en progreso. Tiempo restante: {minutes} minutos y {seconds} segundos.").format(minutes=int(remaining_time // 60), seconds=int(remaining_time % 60)),SpeechPriority.NOW)
+            wx.CallAfter(ui.message, _("Descanso en progreso. Tiempo restante: {minutes} minutos y {seconds} segundos.").format(minutes=int(remaining_time // 60), seconds=int(remaining_time % 60)),SpeechPriority.NOW)
         else:
             remaining_time = DURACION_POMODORO - elapsed_time
             # Translators: Pomodoro in progress.
-            ui.message(_("Ciclo en progreso. Tiempo restante: {minutes} minutos y {seconds} segundos.").format(minutes=int(remaining_time // 60), seconds=int(remaining_time % 60)),SpeechPriority.NOW)
+            wx.CallAfter(ui.message, _("Ciclo en progreso. Tiempo restante: {minutes} minutos y {seconds} segundos.").format(minutes=int(remaining_time // 60), seconds=int(remaining_time % 60)),SpeechPriority.NOW)
 
     def stop(self):
         self.stop_event.set()
@@ -121,7 +122,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         self.pomodoro_thread = PomodoroThread()
         self.pomodoro_thread.start()
 
-    def __del__(self):
+    def terminate(self):
         if self.pomodoro_thread.is_alive():
             self.pomodoro_thread.stop()
             self.pomodoro_thread.join()

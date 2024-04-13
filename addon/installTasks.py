@@ -7,7 +7,6 @@
 
 import addonHandler
 
-_N = _
 addonHandler.initTranslation()
 
 class donate:
@@ -27,7 +26,7 @@ class donate:
         import gui
         
         # Translators: The title of the dialog requesting donations from users.
-        title = _N("Por favor, dona")
+        title = _("Por favor, dona")
         
         # Translators: The text of the donate dialog
         message = _("""Gestor de Pomodoros - complemento gratuito para NVDA.
