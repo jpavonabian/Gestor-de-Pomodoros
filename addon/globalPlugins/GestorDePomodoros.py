@@ -34,7 +34,7 @@ class PomodoroThread(Thread):
         super(PomodoroThread, self).__init__()
         self.stop_event = Event()
         self.paused = True
-        self.daemon = true
+        self.daemon = True
         self.reset()
 
     def reset(self):
