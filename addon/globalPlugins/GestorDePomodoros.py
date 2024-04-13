@@ -48,10 +48,10 @@ class PomodoroThread(Thread):
         while not self.stop_event.is_set():
             if not self.paused and self.pomodoro_active:
                 self.check_time()
-            time.sleep(1)
+            time.sleep(0.5)
 
     def check_time(self):
-        current_time = time.time()
+        current_time = time.monotonic()
         elapsed_time = current_time - self.start_time
         if not self.in_break and elapsed_time >= DURACION_POMODORO:
             self.start_break()
@@ -60,7 +60,7 @@ class PomodoroThread(Thread):
 
     def start_break(self):
         self.in_break = True
-        self.start_time = time.time()
+        self.start_time = time.monotonic()
         self.cycles_completed += 1
         if self.cycles_completed % 4 == 0:
             self.long_break = True
@@ -75,7 +75,7 @@ class PomodoroThread(Thread):
 
     def end_break(self):
         self.in_break = False
-        self.start_time = time.time()
+        self.start_time = time.monotonic()
         if self.long_break:
             # Translators: A long break ends.
             ui.message(_("Descanso largo finalizado. Iniciando nuevo ciclo."),SpeechPriority.NOW)
@@ -90,7 +90,7 @@ class PomodoroThread(Thread):
             # Translators: Pomodoro is not active.
             ui.message(_("El Pomodoro no está activo."),SpeechPriority.NOW)
             return
-        current_time = time.time()
+        current_time = time.monotonic()
         if self.paused:
             # Translators: Pomodoro is paused.
             ui.message(_("El Pomodoro está pausado."),SpeechPriority.NOW)
@@ -133,7 +133,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             self.pomodoro_thread.pomodoro_active = True
             self.pomodoro_thread.paused = False
             self.pomodoro_thread.in_break = False
-            self.pomodoro_thread.start_time = time.time()
+            self.pomodoro_thread.start_time = time.monotonic()
             # Translators: Message announced when the Pomodoro is started.
             ui.message(_("Pomodoro iniciado."))
         elif self.pomodoro_thread.paused:
