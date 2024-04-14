@@ -13,13 +13,7 @@ class donate:
     def open():
         import languageHandler
         import webbrowser
-        lang = languageHandler.getLanguage()
-        # This check ensures the donation page is presented in Spanish if applicable.
-        if lang.startswith('es'):
-            lang = 'es'
-        else:
-            lang = 'en'
-        webbrowser.open(f"https://www.paypal.com/paypalme/jpavonabian?lang={lang}")
+        webbrowser.open(f"https://www.paypal.com/paypalme/jpavonabian")
 
     def request():
         import wx
