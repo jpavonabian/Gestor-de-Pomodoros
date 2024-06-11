@@ -1,4 +1,2 @@
-- Solucionado un error de Braille y los mensajes.
-- Solucionado un error con la gestión de tiempo.
-- Cambiado mucho código interno.
+- Cambiado el nombre interno para evitar un problema con la tienda oficial.
 - SHA256: 

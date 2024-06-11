@@ -16,7 +16,7 @@ def _(arg):
 # Add-on information variables
 addon_info = {
 	# add-on Name/identifier, internal for NVDA
-	"addon_name": "gestorDePomodoros",
+	"addon_name": "GestorDePomodoros",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on
 	# to be shown on installation and add-on information found in Add-ons Manager.
@@ -26,7 +26,7 @@ addon_info = {
 	"addon_description": _("""Complemento que permite gestionar ciclos Pomodoros.
 Útil para estudiantes o trabajadores que necesitan ayuda para dispersarse menos o prestar más atención a sus tareas."""),
 	# version
-	"addon_version": "1.8",
+	"addon_version": "1.9",
 	# Author(s)
 	"addon_author": "Jesús Pavón Abián <galorasd@gmail.com>",
 	# URL for the add-on documentation support
