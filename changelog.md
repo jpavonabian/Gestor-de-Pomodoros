@@ -1,2 +1,2 @@
-- Cambiado el nombre interno para evitar un problema con la tienda oficial.
+- Arreglado un eror que seguía haciendo avanzar el tiempo aunque un pomodoro estuviese pausado.
 - SHA256: 
