@@ -51,3 +51,13 @@ jobs:
             *.pot
           body_path: changelog.md
           prerelease: ${{ endsWith(github.ref, '-dev') }}
+
+      - name: Submit NVDA Add-on
+        id: submit_addon
+        uses: beqabeqa473/submitNVDAAddon@v1
+        with:
+          addon_name: "GestorDePomodoros"  # Nombre ajustado del add-on
+          addon_version: "${{ github.ref_name }}"  # Usa el nombre del tag como versión
+          download_url: "https://github.com/jpavonabian/Gestor-de-Pomodoros/releases/download/${{ github.ref_name }}/GestorDePomodoros-${{ github.ref_name }}.nvda-addon"
+          token: ${{ secrets.USER_TOKEN }}
+          
