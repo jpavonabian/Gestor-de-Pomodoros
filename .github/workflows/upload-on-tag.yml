@@ -56,7 +56,7 @@ jobs:
         id: submit_addon
         uses: beqabeqa473/submitNVDAAddon@v1
         with:
-          addon_name: "GestorDePomodoros"  # Nombre ajustado del add-on
+          addon_name: "GestorDePomodoros"
           addon_version: "${{ github.ref_name }}"  # Usa el nombre del tag como versión
           download_url: "https://github.com/jpavonabian/Gestor-de-Pomodoros/releases/download/${{ github.ref_name }}/GestorDePomodoros-${{ github.ref_name }}.nvda-addon"
           token: ${{ secrets.USER_TOKEN }}
