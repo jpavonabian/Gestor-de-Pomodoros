@@ -1,2 +1,2 @@
-- Arreglado un eror que seguía haciendo avanzar el tiempo aunque un pomodoro estuviese pausado.
+- Actualizada la versión última de testeo de NVDA.
 - SHA256: 
