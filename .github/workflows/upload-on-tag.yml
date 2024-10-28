@@ -65,6 +65,3 @@ jobs:
           channel: "stable"
           license_name: "GPL v2"
           license_url: "https://www.gnu.org/licenses/gpl-2.0.html"
-
-      - name: Print Issue Number
-        run: echo "Issue Number: ${{ steps.submit_addon.outputs.issue_number }}"
