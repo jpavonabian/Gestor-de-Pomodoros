@@ -51,17 +51,3 @@ jobs:
             *.pot
           body_path: changelog.md
           prerelease: ${{ endsWith(github.ref, '-dev') }}
-
-      - name: Submit NVDA Add-on
-        id: submit_addon
-        uses: beqabeqa473/submitNVDAAddon@v1
-        with:
-          addon_name: "GestorDePomodoros"
-          addon_version: "${{ github.ref_name }}"  # Usa el nombre del tag como versión
-          download_url: "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/sampleAddon-${{ github.ref_name }}.nvda-addon"
-          token: ${{ secrets.USER_TOKEN }}
-          source_url: "https://github.com/${{ github.repository }}"
-          publisher: "Tu nombre o el de tu organización"
-          channel: "stable"
-          license_name: "GPL v2"
-          license_url: "https://www.gnu.org/licenses/gpl-2.0.html"
