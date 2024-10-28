@@ -11,7 +11,7 @@ permissions:
   actions: write
   deployments: write
   issues: write
-  pull-requests: read
+  pull-requests: write
 
 jobs:
   buildAndUpload:
@@ -19,21 +19,27 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+
     - name: Set up Python 3.8
       uses: actions/setup-python@v3.1.2
       with:
         python-version: 3.8
+
     - name: Install dependencies
       run: |
         pip install scons markdown
         sudo apt update
         sudo apt install gettext
+
     - name: Build pot template
       run: scons pot
+
     - name: Build add-on
       run: scons
+
     - name: Calculate sha256
       run: sha256sum *.nvda-addon >> changelog.md
+
     - name: Release
       uses: softprops/action-gh-release@v1
       env:
@@ -45,3 +51,20 @@ jobs:
           *.pot
         body_path: changelog.md
         prerelease: ${{ endsWith(github.ref, '-dev') }}
+
+    - name: Submit NVDA Add-on
+      id: submit_addon
+      uses: beqabeqa473/submitNVDAAddon@v1
+      with:
+        addon_name: "sampleAddon"  # Cambia por el nombre de tu add-on
+        addon_version: "${{ github.ref_name }}"  # Usa el nombre del tag como versión
+        download_url: "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/sampleAddon-${{ github.ref_name }}.nvda-addon"
+        token: ${{ secrets.USER_TOKEN }}
+        source_url: "https://github.com/${{ github.repository }}"
+        publisher: "Tu nombre o el de tu organización"
+        channel: "stable"
+        license_name: "GPL v2"
+        license_url: "https://www.gnu.org/licenses/gpl-2.0.html"
+
+    - name: Print Issue Number
+      run: echo "Issue Number: ${{ steps.submit_addon.outputs.issue_number }}"
