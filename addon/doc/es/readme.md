@@ -12,6 +12,8 @@ Una vez activado, el complemento permite al usuario iniciar, pausar, reanudar o 
 Los atajos de teclado deben assignarse desde la opción gestos de entrada del menú Preferencias de NVDA. Las opciones se pueden encontrar bajo la categoría Gestor de pomodoros.
 
 ## Lista de cambios
+### 1.11
+Actualizada la versión última de testeo de NVDA.
 ### 1.10
 - Arreglado un eror que seguía haciendo avanzar el tiempo aunque un pomodoro estuviese pausado.
 
