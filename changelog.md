@@ -1,2 +1,2 @@
-- Actualizada la versión última de testeo de NVDA.
+- Añadida documentación.
 - SHA256: 
