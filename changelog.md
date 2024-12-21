@@ -1,2 +1,2 @@
-- Añadida documentación.
+- Añadida la traducción al ruso. Gracias, [Валентин Куприянов: Русский язык](https://nvda.ru/)
 - SHA256: 

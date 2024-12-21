@@ -12,6 +12,9 @@ Once activated, the add-on allows users to start, pause, resume, or stop the Pom
 Keyboard shortcuts must be assigned from the Input Gestures option in NVDA's Preferences menu. The options can be found under the Pomodoro Manager category.
 
 ## Changelog
+### 1.14
+- Added Russian translation. Thanks, [Валентин Куприянов: Русский язык](https://nvda.ru/)
+
 ### 1.11
 Updated to the latest NVDA testing version.
 ### 1.10
