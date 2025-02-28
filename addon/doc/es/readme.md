@@ -12,6 +12,9 @@ Una vez activado, el complemento permite al usuario iniciar, pausar, reanudar o 
 Los atajos de teclado deben assignarse desde la opción gestos de entrada del menú Preferencias de NVDA. Las opciones se pueden encontrar bajo la categoría Gestor de pomodoros.
 
 ## Lista de cambios
+### 1.15
+- Actualizada la traducción al ruso. [PR #3](https://github.com/jpavonabian/gestor-de-Pomodoros/pull/3)
+
 ### 1.14
 - Añadida la traducción al ruso. Gracias, [Валентин Куприянов: Русский язык](https://nvda.ru/)
 ### 1.13
