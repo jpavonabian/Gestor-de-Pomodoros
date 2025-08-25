@@ -1,3 +1,9 @@
+![Build](https://github.com/jpavonabian/Gestor-de-Pomodoros/actions/workflows/upload-on-tag.yml/badge.svg)
+![Release](https://img.shields.io/github/v/release/jpavonabian/Gestor-de-Pomodoros)
+![License](https://img.shields.io/github/license/jpavonabian/Gestor-de-Pomodoros)
+![Downloads](https://img.shields.io/github/downloads/jpavonabian/Gestor-de-Pomodoros/total)
+![Top language](https://img.shields.io/github/languages/top/jpavonabian/Gestor-de-Pomodoros)
+
 # Gestor de Pomodoros para NVDA
 
 ## Descripción
@@ -12,6 +18,8 @@ Una vez activado, el complemento permite al usuario iniciar, pausar, reanudar o 
 Los atajos de teclado deben assignarse desde la opción gestos de entrada del menú Preferencias de NVDA. Las opciones se pueden encontrar bajo la categoría Gestor de pomodoros.
 
 ## Lista de cambios
+### 1.17
+- Añadida traducción al portugués de Brasil. ¡Gracias! [PR #4](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/4)
 ### 1.16
 - Añadida compatibilidad con NVDA 2025.1.
 ### 1.15
