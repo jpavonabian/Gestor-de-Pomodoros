@@ -1,3 +1,9 @@
+![Build](https://github.com/jpavonabian/Gestor-de-Pomodoros/actions/workflows/upload-on-tag.yml/badge.svg)
+![Release](https://img.shields.io/github/v/release/jpavonabian/Gestor-de-Pomodoros)
+![License](https://img.shields.io/github/license/jpavonabian/Gestor-de-Pomodoros)
+![Downloads](https://img.shields.io/github/downloads/jpavonabian/Gestor-de-Pomodoros/total)
+![Top language](https://img.shields.io/github/languages/top/jpavonabian/Gestor-de-Pomodoros)
+
 # Gestor de Pomodoros para NVDA
 
 ## Descripción
