@@ -19,7 +19,7 @@ Los atajos de teclado deben assignarse desde la opción gestos de entrada del me
 
 ## Lista de cambios
 ### 1.17
-- Añadida traducción al portugués de Brasil. Gracias, [PR #4](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/4)
+- Añadida traducción al portugués de Brasil. ¡Gracias! [PR #4](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/4)
 ### 1.16
 - Añadida compatibilidad con NVDA 2025.1.
 ### 1.15
