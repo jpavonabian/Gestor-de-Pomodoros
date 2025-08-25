@@ -1,2 +1,2 @@
-- Añadida compatibilidad con la última versión de NVDA 2025.1.
+- Añadida traducción al portugués de Brasil. Gracias, [PR #4](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/4)
 - SHA256: 
