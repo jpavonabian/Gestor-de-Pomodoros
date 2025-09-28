@@ -1,2 +1,2 @@
-- Añadida traducción al portugués de Brasil. Gracias, [PR #4](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/4)
+- Actualizada traducción al ruso. Gracias, [PR #5](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/5)
 - SHA256: 

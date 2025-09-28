@@ -12,6 +12,8 @@ Once activated, the add-on allows users to start, pause, resume, or stop the Pom
 Keyboard shortcuts must be assigned from the Input Gestures option in NVDA's Preferences menu. The options can be found under the Pomodoro Manager category.
 
 ## Changelog
+### 1.18
+- Updated russian translate. Thanks, [PR #5](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/5)
 ### 1.17
 - Added Portuguese translation. Thanks! [PR #4](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/4)
 ### 1.16
