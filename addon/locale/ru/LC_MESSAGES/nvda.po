@@ -1,17 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GestorDePomodoros\n"
-"POT-Creation-Date: 2025-02-28 12:21+0500\n"
-"PO-Revision-Date: 2025-02-28 12:36+0500\n"
+"POT-Creation-Date: 2025-09-28 08:26+0300\n"
+"PO-Revision-Date: 2025-09-28 08:30+0300\n"
 "Last-Translator: nvda.ru\n"
-"Language-Team: nvda.ru\n"
+"Language-Team: Russian translation team <nvda.ru>, Danil Kostenkov "
+"<danilkostenkov38@gmail.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 "X-Poedit-Basepath: ../../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -36,11 +37,11 @@ msgstr "Перерыв завершён. Начинаем новый цикл."
 
 #: addon/globalPlugins/GestorDePomodoros.py:94
 msgid "El pomodoro no está activo."
-msgstr "Помидор не запущен."
+msgstr "Цикл Помидора не запущен."
 
 #: addon/globalPlugins/GestorDePomodoros.py:97
 msgid "El pomodoro está pausado."
-msgstr "Помидор приостановлен."
+msgstr "Цикл Помидора приостановлен."
 
 #: addon/globalPlugins/GestorDePomodoros.py:103
 #, python-brace-format
@@ -59,7 +60,7 @@ msgstr ""
 
 #: addon/globalPlugins/GestorDePomodoros.py:140
 msgid "Inicia o pausa el Pomodoro"
-msgstr "Запуск или приостановка Помидора"
+msgstr "Запуск или приостановка цикла Помидора"
 
 #: addon/globalPlugins/GestorDePomodoros.py:140
 #: addon/globalPlugins/GestorDePomodoros.py:156
@@ -69,31 +70,31 @@ msgstr "Управление временем методом помидора"
 
 #: addon/globalPlugins/GestorDePomodoros.py:148
 msgid "Pomodoro iniciado."
-msgstr "Помидор начат."
+msgstr "Цикл Помидора начат."
 
 #: addon/globalPlugins/GestorDePomodoros.py:151
 msgid "Pomodoro reanudado."
-msgstr "Помидор возобновлён."
+msgstr "Цикл Помидора возобновлён."
 
 #: addon/globalPlugins/GestorDePomodoros.py:154
 msgid "Pomodoro pausado."
-msgstr "Помидор приостановлен."
+msgstr "Цикл Помидора приостановлен."
 
 #: addon/globalPlugins/GestorDePomodoros.py:156
 msgid "Reporta el estado del Pomodoro"
-msgstr "Сообщить о состоянии Помидора"
+msgstr "Сообщить о состоянии цикла Помидора"
 
 #: addon/globalPlugins/GestorDePomodoros.py:160
 msgid "Detiene el Pomodoro"
-msgstr "Остановить Помидор"
+msgstr "Остановить цикл Помидора"
 
 #: addon/globalPlugins/GestorDePomodoros.py:164
 msgid "Pomodoro detenido."
-msgstr "Помидор остановлен."
+msgstr "Цикл Помидора остановлен."
 
 #: addon/globalPlugins/GestorDePomodoros.py:166
 msgid "No hay ningún pomodoro activo."
-msgstr "Нет активного Помидора."
+msgstr "Нет активного цикла Помидора."
 
 #: addon/installTasks.py:23
 msgid "Por favor, dona"
@@ -115,7 +116,7 @@ msgstr ""
 
 #: buildVars.py:23
 msgid "Gestor de Pomodoros"
-msgstr "Управление временем методом помидора"
+msgstr "Gestor de Pomodoros (Управление временем методом Помидора)"
 
 #: buildVars.py:26
 msgid ""
@@ -124,5 +125,5 @@ msgid ""
 "menos o prestar más atención a sus tareas."
 msgstr ""
 "Это дополнение позволяет управлять временем циклами (по методу Помидора).\n"
-"Оно полезно для студентов или работников, которым нужна помощь, чтобы "
-"меньше отвлекаться или уделять больше внимания своим задачам."
+"Оно полезно для студентов или работников, которым нужна помощь, чтобы меньше "
+"отвлекаться или уделять больше внимания своим задачам."
