@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+<title>Gestor de Pomodoros 1.17</title>
+</head>
+<body>
+<h1>Gerenciador de Pomodoros para NVDA</h1>
+<h2>Descrição</h2>
+<p>O <strong>Gerenciador de Pomodoros</strong> é um complemento para o leitor de tela NVDA que implementa a técnica Pomodoro, ajudando os usuários a gerenciar seus tempos de trabalho e descanso de forma eficaz.<br />
+A técnica Pomodoro envolve dividir o tempo de trabalho em intervalos (tradicionalmente de 25 minutos), separados por pequenas pausas.<br />
+Este complemento é ideal para usuários que desejam melhorar a produtividade e gerenciar melhor o tempo enquanto utilizam o NVDA.</p>
+<h2>Como Funciona</h2>
+<p>Uma vez ativado, o complemento permite iniciar, pausar, retomar ou parar o cronômetro Pomodoro usando atalhos de teclado específicos.<br />
+Além disso, fornece feedback auditivo e verbal no início e no final de cada sessão de trabalho ou descanso.<br />
+O complemento gerencia automaticamente os ciclos de trabalho e descanso, incluindo pausas longas após cada quatro ciclos de trabalho concluídos.</p>
+<h3>Atalhos de Teclado</h3>
+<p>Os atalhos de teclado devem ser atribuídos a partir da opção <strong>Gestos de Entrada</strong> no menu <strong>Preferências</strong> do NVDA.<br />
+As opções podem ser encontradas na categoria <strong>Gerenciador de Pomodoros</strong>.</p>
+<h2>Registro de Alterações</h2>
+<h3>1.16</h3>
+<ul>
+<li>Adicionada compatibilidade com a versão NVDA 2025.1.</li>
+</ul>
+<h3>1.15</h3>
+<ul>
+<li>Tradução russa atualizada. <a href="https://github.com/jpavonabian/gestor-de-Pomodoros/pull/3">PR #3</a></li>
+</ul>
+<h3>1.14</h3>
+<ul>
+<li>Adicionada tradução para o russo. Obrigado, <a href="https://nvda.ru/">Валентин Куприянов: Русский язык</a></li>
+</ul>
+<h3>1.11</h3>
+<ul>
+<li>Atualizado para a versão de testes mais recente do NVDA.</li>
+</ul>
+<h3>1.10</h3>
+<ul>
+<li>Corrigido um erro em que o tempo continuava avançando mesmo quando um Pomodoro estava pausado.</li>
+</ul>
+<h3>1.9</h3>
+<ul>
+<li>Alterado o nome interno do complemento para evitar problemas com a loja oficial.</li>
+</ul>
+<h3>1.8</h3>
+<ul>
+<li>Corrigido um erro de Braille e mensagens.  </li>
+<li>Corrigido um problema de gerenciamento de tempo.  </li>
+<li>Grande parte do código interno foi refatorada.</li>
+</ul>
+<h3>1.7</h3>
+<ul>
+<li>Corrigido um erro no canal de distribuição.  </li>
+<li>Corrigido um bug ao tentar parar um Pomodoro que ainda não havia sido iniciado.</li>
+</ul>
+<h3>1.6</h3>
+<ul>
+<li>Alterada a duração e frequência dos tons.  </li>
+<li>As mensagens do complemento agora têm alta prioridade para garantir que não sejam perdidas durante outras atividades.  </li>
+<li>Os tons não são mais reproduzidos apenas no canal direito; isso era um erro.</li>
+</ul>
+<h3>1.5</h3>
+<ul>
+<li>Os atalhos de teclado foram removidos. Agora devem ser atribuídos pelo usuário.</li>
+</ul>
+<h3>1.4</h3>
+<ul>
+<li>Atalhos de teclado atualizados para maior intuitividade.  </li>
+<li>Pequenos ajustes no código interno.  </li>
+<li>Os atalhos agora aparecem corretamente nas categorias de gestos.</li>
+</ul>
+<h3>1.3</h3>
+<ul>
+<li>Gestos de entrada agora podem ser reatribuídos na categoria <strong>Gerenciador de Pomodoros</strong>. <a href="https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/1">PR #1</a></li>
+</ul>
+<h3>1.2</h3>
+<ul>
+<li>Corrigido o tratamento interno do complemento pelo NVDA.</li>
+</ul>
+<h3>1.1</h3>
+<ul>
+<li>O complemento não funciona em telas seguras.  </li>
+<li>Processo de lançamento automatizado usando GitHub Actions.</li>
+</ul>
+<h3>1.0</h3>
+<ul>
+<li>Lançamento inicial do complemento.  </li>
+<li>Funcionalidade básica do Pomodoro implementada, incluindo iniciar, pausar, retomar e parar o cronômetro.  </li>
+<li>Anúncios auditivos e verbais para o início e o fim das sessões de trabalho e descanso.</li>
+</ul>
+<h2>Agradecimentos Especiais</h2>
+<ul>
+<li>A <strong>Sukil Etxenike</strong> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#107;&#105;&#108;&#101;&#116;&#120;&#101;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#101;&#115;">&#115;&#117;&#107;&#105;&#108;&#101;&#116;&#120;&#101;&#64;&#121;&#97;&#104;&#111;&#111;&#46;&#101;&#115;</a> por me colocar no caminho certo quando eu não tinha experiência em desenvolver complementos e não sabia por onde começar.  </li>
+<li>A <strong>Ángel Alcántar</strong> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#97;&#121;&#111;&#97;&#108;&#99;&#97;&#110;&#116;&#97;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#114;&#97;&#121;&#111;&#97;&#108;&#99;&#97;&#110;&#116;&#97;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> pela revisão do código.  </li>
+<li>A <strong>Noelia Ruiz Martínez</strong> <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#114;&#109;&#49;&#57;&#55;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#110;&#114;&#109;&#49;&#57;&#55;&#55;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a> pelo feedback sobre o código e por aguentar tantas perguntas de iniciante.</li>
+</ul>
+</body>
+</html>
