@@ -16,6 +16,14 @@ GestorDePomodoros (Управление временем методом Поми
 Клавиатурные команды должны быть назначены самостоятельно в диалоге «Жесты ввода» меню «Параметры NVDA». Опции можно найти в категории «Менеджер Pomodoro».
 
 ## Журнал изменений
+### 1.19
+- Обновлён перевод на русский язык. Спасибо, [PR #6](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/6)
+### 1.18
+- Обновлён перевод на русский язык. Спасибо, [PR #5](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/5)
+### 1.17
+- Добавлен перевод на португальский язык. Спасибо! [PR #4](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/4)
+### 1.16
+- Добавлена совместимость с NVDA 2025.1.
 ### 1.15
 - Обновлён русский перевод. [PR #3](https://github.com/jpavonabian/gestor-de-Pomodoros/pull/3)
 ### 1.14
