@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: GestorDePomodoros\n"
+"Project-Id-Version: GestorDePomodoros 1.11\n"
 "POT-Creation-Date: 2025-09-28 08:39+0300\n"
-"PO-Revision-Date: 2025-09-28 08:39+0300\n"
+"PO-Revision-Date: 2026-01-15 14:37+0300\n"
 "Last-Translator: nvda.ru\n"
 "Language-Team: Russian translation team <nvda.ru>, Danil Kostenkov "
 "<danilkostenkov38@gmail.com>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 "X-Poedit-Basepath: ../../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: addon/globalPlugins/GestorDePomodoros.py:74
 msgid "Ciclo completado. Iniciando descanso largo."
-msgstr "Цикл завершён. Начинается длительный перерыв."
+msgstr "Цикл завершён. Начинаем длительный перерыв."
 
 #: addon/globalPlugins/GestorDePomodoros.py:78
 msgid "Ciclo completado. Iniciando descanso."
-msgstr "Цикл завершён. Начинаем отдыхать."
+msgstr "Цикл завершён. Начинаем перерыв."
 
 #: addon/globalPlugins/GestorDePomodoros.py:86
 msgid "Descanso largo finalizado. Iniciando nuevo ciclo."
@@ -60,7 +60,7 @@ msgstr ""
 
 #: addon/globalPlugins/GestorDePomodoros.py:140
 msgid "Inicia o pausa el Pomodoro"
-msgstr "Запуск или приостановка цикла Помидора"
+msgstr "Запускает или приостанавливает цикл Помидора"
 
 #: addon/globalPlugins/GestorDePomodoros.py:140
 #: addon/globalPlugins/GestorDePomodoros.py:156
@@ -70,7 +70,7 @@ msgstr "Управление временем методом помидора"
 
 #: addon/globalPlugins/GestorDePomodoros.py:148
 msgid "Pomodoro iniciado."
-msgstr "Цикл Помидора начат."
+msgstr "Цикл Помидора запущен."
 
 #: addon/globalPlugins/GestorDePomodoros.py:151
 msgid "Pomodoro reanudado."
@@ -82,11 +82,11 @@ msgstr "Цикл Помидора приостановлен."
 
 #: addon/globalPlugins/GestorDePomodoros.py:156
 msgid "Reporta el estado del Pomodoro"
-msgstr "Сообщить о состоянии цикла Помидора"
+msgstr "Сообщает состояние цикла Помидора"
 
 #: addon/globalPlugins/GestorDePomodoros.py:160
 msgid "Detiene el Pomodoro"
-msgstr "Остановить цикл Помидора"
+msgstr "Останавливает цикл Помидора"
 
 #: addon/globalPlugins/GestorDePomodoros.py:164
 msgid "Pomodoro detenido."
