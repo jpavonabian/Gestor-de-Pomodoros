@@ -6,7 +6,7 @@ set /p VERSION=Introduce el numero de version (ej: 1.2.3):
 
 REM Hacer commit con el mensaje
 REM Crear el tag
-git tag %VERSION%
+git tag -s %VERSION% -m "%VERSION%"
 if errorlevel 1 (
     echo Error al crear el tag.
     goto :eof
