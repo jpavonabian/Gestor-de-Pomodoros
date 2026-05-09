@@ -1,2 +1,4 @@
-- Actualizada traducción al ruso. Gracias, [PR #6](https://github.com/jpavonabian/Gestor-de-Pomodoros/pull/6)
+- Actualizadas traducciones.
+- Compatibilidad con la última versión de NVDA.
+
 - SHA256: 
