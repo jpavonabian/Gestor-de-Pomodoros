@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\repos\\\\Gestor-de-Pomodoros\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table)",
+      "PowerShell(Head *)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\repos\\\\Gestor-de-Pomodoros\\\\addon\\\\globalPlugins\\\\GestorDePomodoros.py\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Usuario\\\\Desktop\\\\repos\\\\Gestor-de-Pomodoros\\\\actualizadorIdiomas\" -Recurse -Force)",
+      "PowerShell(Remove-Item *)"
+    ]
+  }
+}

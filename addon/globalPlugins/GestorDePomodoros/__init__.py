@@ -17,6 +17,8 @@ import globalVars
 from speech.priorities import SpeechPriority
 import wx
 
+from .actualizadorRecursos import ActualizadorRecursos
+
 addonHandler.initTranslation()
 
 #DURACION_POMODORO = 25
@@ -131,8 +133,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         super(GlobalPlugin, self).__init__()
         self.pomodoro_thread = PomodoroThread()
         self.pomodoro_thread.start()
+        self._actualizador = ActualizadorRecursos(
+            "jpavonabian",
+            "Gestor-de-Pomodoros",
+            modo_comprobacion="periodico",
+            intervalo_horas=1,
+            solo_idioma_actual=True,
+            notificar_usuario=False,
+            hacer_respaldo=True,
+        )
 
     def terminate(self):
+        self._actualizador.detener()
         if self.pomodoro_thread.is_alive():
             self.pomodoro_thread.stop()
             self.pomodoro_thread.join()
